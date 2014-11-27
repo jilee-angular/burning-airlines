@@ -1,17 +1,23 @@
 var App = App || {};
 
-App.Views.AirplaneItemView = Backbone.View.extend ({
+App.Views.AirplaneItemView = Backbone.View.extend({
 
   tagName: 'li',
   events: {
     'click': 'selectAirplane',
-    // 'click #cancel': 'clearAirplane',
+    'click .save': 'saveAirplane',
     'click .del': 'deleteAirplane'
-    // 'click .list': 'accessList'
   },
 
   initialize: function() {
     this.listenTo(this.model, 'change', this.render);
+  },
+
+  deleteAirplane: function(event) {
+    event.preventDefault();
+
+    this.model.destroy();
+    this.remove();
   },
 
   render: function() {
@@ -33,5 +39,13 @@ App.Views.AirplaneItemView = Backbone.View.extend ({
     this.$el.fadeOut(700, function(){
       this.remove();      
     })
+  },
+
+  saveAirplane: function(event) {
+    event.preventDefault();
+  },
+
+  accessList: function(event) {
+    event.preventDefault();
   }
 });

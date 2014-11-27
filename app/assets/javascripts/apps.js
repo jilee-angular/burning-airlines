@@ -33,9 +33,7 @@ $btn.on('click', function(){
   $('#createForm').toggle("slow");
 });
 
-
 //////////////////Add new flights/////////////////////////
-
 
 App.flights = [];
 
@@ -74,6 +72,7 @@ $('#newFlight button').on('click', function(){
 })
 
 
+
  // hide create form to start
 var $btn = $("#createFlight");
 $('#container').hide();
@@ -81,4 +80,5 @@ $('#container').hide();
 $btn.on('click', function(){
   $('#container').toggle("slow");
 }); 
+
 
