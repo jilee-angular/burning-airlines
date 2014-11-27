@@ -27,7 +27,13 @@ $('#newAirplane button').on('click', function(){
   $('#airplaneDetails').empty().append(view.render().el);
 }); // ends button click
 
+// hide create form
+var $btn = $("#createBtn");
+$('#createForm').hide();
 
+$btn.on('click', function(){
+  $('#createForm').toggle("slow");
+});
 
 
 //////////////////Add new flights/////////////////////////
