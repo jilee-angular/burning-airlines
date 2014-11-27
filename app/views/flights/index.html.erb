@@ -3,15 +3,15 @@
 
 <div id="container">
 
-  <form action="">
-    <input type="text" value="flight #">
-    <input type="text" value="date">
-    <input type="text" value="to">
-    <input type="text" value="from">
-    <input type="text" value="plane">
-  <a href="Cancel"></a>
-  <button>Save</button>
-  </form>
+    <div id="newFlight">
+      <input type="text" id="flight_number" value="flight #">
+      <input type="text" id="date" value="date">
+      <input type="text" id="destination" value="to">
+      <input type="text" id="origin" value="from">
+      <input type="text" id="plane" value="plane">
+      <a href="">Cancel</a>
+      <button>Save</button>
+    </div>
 
 <h2>Flights</h2>
   <ul>
@@ -22,5 +22,5 @@
     <li>Seats</li>
   </ul>
 
-  <ul class="flight_details"></ul>
+  <ul id="flight_details"></ul>
 </div>

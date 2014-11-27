@@ -3,22 +3,22 @@
 <div class="createAirplane">
   
   <div id="newAirplane">
-    <input type="text" placeholder="name">
-    <input type="text" placeholder="rows">
-    <input type="text" placeholder="cols">
+    <input type="text" placeholder="name" id="airplaneName">
+    <input type="text" placeholder="rows" id="airplaneRow">
+    <input type="text" placeholder="cols" id="airplaneCol">
 <!--     <a href="">Cancel</a> -->
     <button class="save">Save</button>
   </div>
 
 </div>
 
-<div id="airplaneList">
-  <ul></ul>
+<div id="airplaneDetails">
+  
 </div>
 
 
 <script type="template/handlebars" id="airplaneItemView">
-  <p>{{name}}
-    <a class="del" href=""><span class="glyphicon glyphicon-trash"></span></a>
+  <p>{{name}} 
+    
   </p>  
 </script>

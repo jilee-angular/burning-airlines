@@ -24,7 +24,7 @@ class AirplanesController < ApplicationController
   private
 
   def airplane_params
-    params.require(:airplane).permit(:name)
+    params.require(:airplane).permit(:name, :row, :column)
   end
 
 end
