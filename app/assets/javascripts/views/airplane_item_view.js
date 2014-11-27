@@ -5,11 +5,8 @@ App.Views.AirplaneItemView = Backbone.View.extend({
   tagName: 'li',
   events: {
     'click': 'selectAirplane',
-
-    'click .save': 'saveAirplane'
-    // 'click .del': 'deleteAirplane',
-    // 'click .list': 'accessList'
-
+    'click .save': 'saveAirplane',
+    'click .del': 'deleteAirplane'
   },
 
   initialize: function() {
@@ -34,8 +31,6 @@ App.Views.AirplaneItemView = Backbone.View.extend({
   selectAirplane: function() {
     this.$el.parent().find('li').removeClass('highlight');
     this.$el.addClass('highlight');
-
-    // $('#todo').find('p').hide().html(this.model.get("body")).fadeIn();
   },
 
   deleteAirplane: function(event) {
@@ -52,8 +47,5 @@ App.Views.AirplaneItemView = Backbone.View.extend({
 
   accessList: function(event) {
     event.preventDefault();
-
-    // $('#airplane').find('p').hide().html(this.model.get("name")).fadeIn();
-
   }
 });
