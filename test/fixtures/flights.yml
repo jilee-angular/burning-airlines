@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  origin: MyString
+  destination: MyString
+  date: 2014-11-27 12:44:31
+  plane: MyString
+
+two:
+  number: MyString
+  origin: MyString
+  destination: MyString
+  date: 2014-11-27 12:44:31
+  plane: MyString
