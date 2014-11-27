@@ -1,24 +1,40 @@
-<h3>create plane</h3>
+<button id="createBtn" class="btn btn-danger createPlane">Create Plane</button>
 
-<div class="createAirplane">
+
+<div id="createForm" class="createAirplane form-inline">  
   
-  <div id="newAirplane">
-    <input type="text" placeholder="name">
-<!--     <input type="text" placeholder="rows">
-    <input type="text" placeholder="cols"> -->
-<!--     <a href="">Cancel</a> -->
-    <button class="save">Save</button>
-  </div>
+    <div id="newAirplane" class="form_group">
+      <div class="form_group">
+        <input type="text" placeholder="name" id="airplaneName" class="form-control">
+        <input type="text" placeholder="rows" id="airplaneRow" class="form-control">
+        <input type="text" placeholder="cols" id="airplaneCol" class="form-control">
+      </div>
 
+      <div class="buttons">
+        <a href="" id="cancel">Cancel</a>
+        <button class="save btn btn-danger">Save</button>
+      </div>    
+    </div>
 </div>
 
-<div id="airplaneList">
-  <ul></ul>
-</div>
+<ul id="airplaneDetails">
+</ul>
 
+
+<script>
+
+  var $btn = $("#createBtn");
+  $('#createForm').hide();
+ 
+  $btn.on('click', function(){
+    $('#createForm').toggle();
+  });
+
+</script>
 
 <script type="template/handlebars" id="airplaneItemView">
-  <p>{{body}}
-    <a class="del" href=""><span class="glyphicon glyphicon-trash"></span></a>
+  <p><h3 class="align">{{name}}</h3>
+    <a class="del align" href=""><span class="glyphicon glyphicon-remove"></span></a>
   </p>  
 </script>
+
