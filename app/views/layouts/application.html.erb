@@ -6,20 +6,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+  
+  <div class="title">
+    <a href="/airplanes">Planes</a>
+    <a href="/flights">Flights</a>
+    <a href="">Admin</a>
+  </div>
+  
+  <h1>Emperor Airlines</h1>
 
-<a href="">Planes</a>
-<a href="">Flights</a>
-<a href="">Admin</a>
-
-<h1>Emperor Airlines</h1>
 
 
+  <%= yield %>
 
-<%= yield %>
+</div>
 
-<script type="template/handlebars" id="flightItemView">
-  <li>{{ number }} {{ date }}  {{ destination }}  {{ origin }}  {{ plane }}</li>
-</script>
+
+
 
 <script>
   var App = {};

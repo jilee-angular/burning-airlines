@@ -5,17 +5,16 @@ App.airplanes = new App.Collections.Airplanes();
 App.airplanes.fetch().done(function(){
   App.airplanes.each(function(airplane, index){
     var view = new App.Views.AirplaneItemView({ model: airplane });
-    $('#airplaneList ul').append(view.render().el);
+    $('#airplaneDetails').append(view.render().el);
   });
 }); // ends fetch
 
 $('#newAirplane button').on('click', function(){
+
   var airplaneVal = $('#newAirplane #airplaneName').val();
   $('#newAirplane #airplaneName').val('');
-
   var row = $('#newAirplane #airplaneRow').val();
   $('#newAirplane #airplaneRow').val('');
-
   var col = $('#newAirplane #airplaneCol').val();
   $('#newAirplane #airplaneCol').val('');
 
@@ -24,14 +23,16 @@ $('#newAirplane button').on('click', function(){
   App.airplanes.create(airplane);
 
   var view = new App.Views.AirplaneItemView({ model: airplane });
-  $('#airplaneDetails').append(view.render().el);
-});
 
+  $('#airplaneDetails').empty().append(view.render().el);
+}); // ends button click
 
 
 
 
 //////////////////Add new flights/////////////////////////
+
+
 App.flights = [];
 
 App.flights = new App.Collections.Flights();

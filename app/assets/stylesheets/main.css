@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*   airplane   */
+.createPlane {
+  margin-left: 460px;
+  margin-bottom: 50px;
+  margin-top: -36px;
+}
+.buttons {
+  margin-left: 400px;
+  margin-top: 20px;
+}
+.createAirplane {
+  max-width: 580px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+}
+#cancel {
+  margin: 0 10px;
+}
+#airplaneDetails {
+  list-style: none;
+}
+/*   airplane end   */
