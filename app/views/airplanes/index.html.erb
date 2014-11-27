@@ -1,16 +1,16 @@
 <h3>create plane</h3>
 
-<form class="createAirplane" action="">
+<div class="createAirplane">
   
   <div id="newAirplane">
     <input type="text" placeholder="name">
-    <input type="text" placeholder="rows">
-    <input type="text" placeholder="cols">
-    <a href="">Cancel</a>
+<!--     <input type="text" placeholder="rows">
+    <input type="text" placeholder="cols"> -->
+<!--     <a href="">Cancel</a> -->
     <button class="save">Save</button>
   </div>
 
-</form>
+</div>
 
 <div id="airplaneList">
   <ul></ul>
@@ -19,5 +19,6 @@
 
 <script type="template/handlebars" id="airplaneItemView">
   <p>{{body}}
+    <a class="del" href=""><span class="glyphicon glyphicon-trash"></span></a>
   </p>  
 </script>
