@@ -1,37 +1,40 @@
 <button id="createBtn" class="btn btn-danger createPlane">Create Plane</button>
 
-<div id="createForm" class="createAirplane form-inline">  
-  <div id="newAirplane" class="form_group">
-    <div class="form_group">
-      <input type="text" placeholder="name" id="airplaneName" class="form-control">
-      <input type="text" placeholder="rows" id="airplaneRow" class="form-control">
-      <input type="text" placeholder="cols" id="airplaneCol" class="form-control">
-    </div>
 
-    <div class="buttons">
-      <a href="" id="cancel">Cancel</a>
-      <button class="save btn btn-danger">Save</button>
-    </div>    
-  </div>
+<div id="createForm" class="createAirplane form-inline">  
+  
+    <div id="newAirplane" class="form_group">
+      <div class="form_group">
+        <input type="text" placeholder="name" id="airplaneName" class="form-control">
+        <input type="text" placeholder="rows" id="airplaneRow" class="form-control">
+        <input type="text" placeholder="cols" id="airplaneCol" class="form-control">
+      </div>
+
+      <div class="buttons">
+        <a href="" id="cancel">Cancel</a>
+        <button class="save btn btn-danger">Save</button>
+      </div>    
+    </div>
 </div>
 
 <ul id="airplaneDetails">
 </ul>
 
 
+<script>
+
+  var $btn = $("#createBtn");
+  $('#createForm').hide();
+ 
+  $btn.on('click', function(){
+    $('#createForm').toggle();
+  });
+
+</script>
+
 <script type="template/handlebars" id="airplaneItemView">
-  <p>{{name}} 
-    <a class="del" href=""><span class="glyphicon glyphicon-remove"></span></a>
+  <p><h3 class="align">{{name}}</h3>
+    <a class="del align" href=""><span class="glyphicon glyphicon-remove"></span></a>
   </p>  
 </script>
 
-<script type="text/javascript">
-
-
-    $('#createForm').hide();
-    $("button#createBtn").on("click", function(){
-        $("#createForm").show();
-    });
-
-
-</script>
