@@ -4,7 +4,8 @@ App.Views.AirplaneItemView = Backbone.View.extend ({
 
   tagName: 'li',
   events: {
-    'click': 'selectAirplane'
+    'click': 'selectAirplane',
+    'click .save': 'saveAirplane'
     // 'click .del': 'deleteAirplane',
     // 'click .list': 'accessList'
   },
@@ -34,6 +35,10 @@ App.Views.AirplaneItemView = Backbone.View.extend ({
     this.$el.fadeOut(700, function(){
       this.remove();      
     })
+  },
+
+  saveAirplane: function(event) {
+    event.preventDefault();
   },
 
   accessList: function(event) {
