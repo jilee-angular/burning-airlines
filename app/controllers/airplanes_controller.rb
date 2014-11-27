@@ -4,7 +4,7 @@ class AirplanesController < ApplicationController
     @airplanes = Airplane.all
     respond_to do |format|
       format.html{}
-      format.json { render :json => @todos }
+      format.json { render :json => @aiplanes }
     end
   end
 
