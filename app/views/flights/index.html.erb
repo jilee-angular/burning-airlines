@@ -1,4 +1,4 @@
-<button class="btn btn-danger createPlane">Create Flight</button>
+<button id="createFlight" class="btn btn-danger createPlane">Create Flight</button>
 
 
 <div id="container" class="createAirplane form-inline">
@@ -9,9 +9,12 @@
       <input type="text" id="destination" placeholder="to" class="form-control">
       <input type="text" id="origin" placeholder="from" class="form-control">
       <input type="text" id="plane" placeholder="plane" class="form-control">
-      <a href="" class="cancel">Cancel</a>
-      <button class="btn btn-danger">Save</button>
     </div>
+    <div class="buttons">
+      <a href="" class="cancel">Cancel</a>
+      <button class="save btn btn-danger">Save</button>
+    </div>
+</div>
 
 <h2>Flights</h2>
   <ul>
@@ -23,9 +26,10 @@
   </ul>
 
   <ul id="flight_details"></ul>
-</div>
 
 
 <script type="template/handlebars" id="flightItemView">
   <li>{{ number }} {{ date }}  {{ destination }}  {{ origin }}  {{ plane }}</li>
 </script>
+
+
