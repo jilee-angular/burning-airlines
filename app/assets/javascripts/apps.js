@@ -33,9 +33,7 @@ $btn.on('click', function(){
   $('#createForm').toggle("slow");
 });
 
-
 //////////////////Add new flights/////////////////////////
-
 
 App.flights = [];
 
@@ -72,4 +70,3 @@ $('#newFlight button').on('click', function(){
   console.log(view);
   $('#flight_details').append(view.render().el);
 })
-
