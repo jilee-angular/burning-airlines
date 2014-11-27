@@ -1,0 +1,93 @@
+* { box-sizing: border-box; }
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*   layout page   */
+.heading {
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+.title{
+  background-color: #D9534F;
+  padding: 10px 52px;
+  margin: 30px 5px 40px 0;
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+.title a:hover {
+  color: #999;
+}
+.container {
+  max-width: 1000px;
+  min-width: 620px;
+  margin: 0 auto;
+}
+/*   layout end   */
+
+/*   airplane   */
+.createPlane {
+  margin-left: 460px;
+  margin-bottom: 50px;
+  margin-top: -36px;
+}
+.buttons {
+  margin-left: 370px;
+  margin-top: 20px;
+}
+.createAirplane {
+  max-width: 580px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #D9534F;
+}
+.cancel {
+  margin: 0 10px;
+  background-color: #D9534F;
+  padding: 9px;
+  border-radius: 5px;
+  color: #fff;
+}
+#cancel:hover {
+  background-color: #d13636; 
+  text-decoration: none;
+}
+#airplaneDetails {
+  list-style: none;
+}
+.del {
+  margin-left: 50px;
+  color: #d13636;
+}
+.align {
+  display: inline-block;
+}
+#createForm {
+  margin-bottom: 20px;
+}
+.form-control {
+  max-width: 100px;
+}
+.airlineName {
+  color: #d13636;
+}
+.save {
+  margin-top: -3px;
+}
+/*   airplane end   */
+
+
+
+
+
+
+

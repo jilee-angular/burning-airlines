@@ -7,11 +7,19 @@ class FlightsController < ApplicationController
       format.html {}
       format.json { render :json => @quotes }
     end
+  end
 
-    def create
+  def create
     @flight = Flight.new(flight_params)
     @flight.save
     render :json => @flight
   end
+
+  private
+
+  def flight_params
+    params.require(:flight).permit(:number, :date, :destination, :origin, :plane)
+  end
+
 
 end

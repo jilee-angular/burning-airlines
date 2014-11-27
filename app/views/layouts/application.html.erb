@@ -6,16 +6,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+  
+  <div class="heading">
+    <a href="/airplanes" class="title">Planes</a>
+    <a href="/flights" class="title">Flights</a>
+    <a href="" class="title">Admin</a>
+  </div>
 
-<a href="">Planes</a>
-<a href="">Flights</a>
-<a href="">Admin</a>
-
-<h1>Emperor Airlines</h1>
+  <h1 class="airlineName">Emperor Airlines</h1>
 
 
 
-<%= yield %>
+  <%= yield %>
+
+</div>
+
+
+
 
 <script>
   var App = {};
