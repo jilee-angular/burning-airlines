@@ -7,8 +7,9 @@ class FlightsController < ApplicationController
       format.html {}
       format.json { render :json => @quotes }
     end
+  end
 
-    def create
+  def create
     @flight = Flight.new(flight_params)
     @flight.save
     render :json => @flight

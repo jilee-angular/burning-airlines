@@ -24,26 +24,26 @@ $('#newAirplane button').on('click', function(){
 
 //////////////////Add new flights/////////////////////////
 
-App.airplanes = [];
+App.flights = [];
 
-App.airplanes = new App.Collections.Airplanes();
+App.flights = new App.Collections.Flights();
 
-App.airplanes.fetch().done(function(){
-  App.airplanes.each(function(airplane, index){
-    var view = new App.Views.AirplaneItemView({ model: airplane });
-    $('#airplaneList ul').append(view.render().el);
+App.flights.fetch().done(function(){
+  App.flights.each(function(flight, index){
+    var view = new App.Views.FlightItemView({ model: airplane });
+    $('#flightList ul').append(view.render().el);
   });
 
 }); // ends fetch
 
-$('#newAirplane button').on('click', function(){
-  var airplaneVal = $('#newAirplane input').val();
-  $('#newAirplane input').val('');
+$('#newFlight button').on('click', function(){
+  var flightVal = $('#newFlight input').val();
+  $('#newFlight input').val('');
 
-  var airplane = new App.Models.Airplane({ body: airplaneVal });
+  var flight = new App.Models.Flight({ body: flightVal });
 
-  App.airplanes.create(airplane);
+  App.flights.create(flight);
 
-  var view = new App.Views.AirplaneItemView({ model: airplane });
-  $('#airplaneList ul').append(view.render().el);
+  var view = new App.Views.FlightItemView({ model: flight });
+  $('#flightList ul').append(view.render().el);
 })
