@@ -2,8 +2,9 @@ class AirplanesController < ApplicationController
 
   def index
     @airplanes = Airplane.all
+
     respond_to do |format|
-      format.html{}
+      format.html {}
       format.json { render :json => @airplanes }
     end
   end
@@ -23,7 +24,7 @@ class AirplanesController < ApplicationController
   private
 
   def airplane_params
-    params.require(:airplane).permit(:body)
+    params.require(:airplane).permit(:name)
   end
 
 end

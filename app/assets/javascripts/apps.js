@@ -14,7 +14,7 @@ $('#newAirplane button').on('click', function(){
   var airplaneVal = $('#newAirplane input').val();
   $('#newAirplane input').val('');
 
-  var airplane = new App.Models.Airplane({ body: airplaneVal });
+  var airplane = new App.Models.Airplane({ name: airplaneVal });
 
   App.airplanes.create(airplane);
 

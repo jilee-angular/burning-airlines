@@ -22,8 +22,8 @@ App.Views.AirplaneItemView = Backbone.View.extend ({
     return this;
   },
 
-  selectAirplane: function(event) {
-    event.preventDefault();
+  selectAirplane: function() {
+    // event.preventDefault();
     this.$el.parent().find('li').removeClass('highlight');
     this.$el.addClass('highlight');
     // $('#todo').find('p').hide().html(this.model.get("body")).fadeIn();
