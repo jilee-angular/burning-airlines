@@ -1,11 +1,23 @@
 <h1>Burning Airlines</h1>
 
-<form action="">
+<form class="createAirplane" action="">
   
-  <input type="text">
-  <input type="text">
-  <input type="text">
-  <a href="">Cancel</a>
-  <button>Create</button>
+  <div id="newAirplane">
+    <input type="text" placeholder="name">
+    <input type="text" placeholder="rows">
+    <input type="text" placeholder="cols">
+    <a href="">Cancel</a>
+    <button>Save</button>
+  </div>
 
 </form>
+
+<div id="airplaneList">
+  <ul></ul>
+</div>
+
+
+<script type="template/handlebars" id="airplaneItemView">
+  <p>{{body}}
+  </p>  
+</script>
