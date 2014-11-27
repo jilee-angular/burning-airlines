@@ -30,6 +30,6 @@ App.Views.AirplaneItemView = Backbone.View.extend({
   selectAirplane: function() {
     this.$el.parent().find('li').removeClass('highlight');
     this.$el.addClass('highlight');
-    $('#airplane').find('p').hide().html(this.model.get("body")).fadeIn();
+    $('#airplane').find('p').hide().html(this.model.get("name")).fadeIn();
   }
 });

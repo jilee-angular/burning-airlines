@@ -23,7 +23,7 @@ class AirplanesController < ApplicationController
   private
 
   def airplane_params
-    params.require(:airplane).permit(:body)
+    params.require(:airplane).permit(:name)
   end
 
 end
