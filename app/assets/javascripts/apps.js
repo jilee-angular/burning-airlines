@@ -19,15 +19,13 @@ $('#newAirplane button').on('click', function(){
   $('#newAirplane #airplaneCol').val('');
 
   var airplane = new App.Models.Airplane({ name: airplaneVal, row: row, column: col });
-
   App.airplanes.create(airplane);
-
   var view = new App.Views.AirplaneItemView({ model: airplane });
 
   $('#airplaneDetails').empty().append(view.render().el);
 }); // ends button click
 
-// hide create form
+// hide create form to start
 var $btn = $("#createBtn");
 $('#createForm').hide();
 

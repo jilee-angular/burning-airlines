@@ -50,7 +50,7 @@ ul {
   border-width: 2px;
   border-color: #D9534F;
 }
-#cancel {
+.cancel {
   margin: 0 10px;
   background-color: #D9534F;
   padding: 9px;
