@@ -15,7 +15,9 @@
 //= require handlebars
 //= require underscore
 //= require backbone
+//= require jscharts
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
 //= require apps
+//= require_tree .
