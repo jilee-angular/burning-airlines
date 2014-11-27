@@ -17,6 +17,10 @@
 
 <%= yield %>
 
+<script type="template/handlebars" id="flightItemView">
+  <li>{{ number }} {{ date }}  {{ destination }}  {{ origin }}  {{ plane }}</li>
+</script>
+
 <script>
   var App = {};
   App.Views = {};

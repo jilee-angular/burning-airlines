@@ -37,13 +37,26 @@ App.flights.fetch().done(function(){
 }); // ends fetch
 
 $('#newFlight button').on('click', function(){
-  var flightVal = $('#newFlight input').val();
-  $('#newFlight input').val('');
+  var flight_number = $('#newFlight #flight_number').val();
+  $('#newFlight #flight_number').val('');
 
-  var flight = new App.Models.Flight({ body: flightVal });
+  var date = $('#newFlight #date').val();
+  $('#newFlight #date').val('');
+
+  var destination = $('#newFlight #destination').val();
+  $('#newFlight #destination').val('');
+
+  var origin = $('#newFlight #origin').val();
+  $('#newFlight #origin').val('');
+
+  var plane = $('#newFlight #plane').val();
+  $('#newFlight #plane').val('');
+
+  var flight = new App.Models.Flight({ number: flight_number, date: date, destination: destination, origin: origin, plane: plane });
 
   App.flights.create(flight);
 
   var view = new App.Views.FlightItemView({ model: flight });
-  $('#flightList ul').append(view.render().el);
+  console.log(view);
+  $('#flight_details').append(view.render().el);
 })
