@@ -101,7 +101,7 @@ App.flights = new App.Collections.Flights();
 
 App.flights.fetch().done(function(){
   App.flights.each(function(flight, index){
-    var view = new App.Views.FlightItemView({ model: airplane });
+    var view = new App.Views.FlightItemView({ model: flight });
     $('#flightList ul').append(view.render().el);
   });
 }); // ends fetch

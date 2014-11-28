@@ -16,8 +16,8 @@ class FlightsController < ApplicationController
   end
 
   def search
-    @flight = Flight.where
-
+    @flights = []
+    @flights = Flight.where(:origin => "#{params[:start]}").where(:destination => "#{params[:end]}")
   end
 
 

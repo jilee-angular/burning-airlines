@@ -1,6 +1,8 @@
 <%= form_tag search_path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= text_field_tag :start, params[:from], placeholder: "from", class: "form-control" %>
+    <%= text_field_tag :end, params[:to], placeholder: "to", class: "form-control" %>
+    <%#= submit_tag "Search", :name => nil %>
+    <button class="btn btn-danger search">Search Flight</button>
   </p>
 <% end %>
