@@ -27,8 +27,8 @@ $('#newAirplane button').on('click', function(){
   // renders the flights seats
   (function(){//your code here
   //grid width and height
-  var bw = row * 10;
-  var bh = col * 10;
+  var bw = row * 40;
+  var bh = col * 40;
   //padding around grid
   var p = 10;
   //size of canvas
