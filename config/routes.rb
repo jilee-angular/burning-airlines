@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   get '/admin' => 'admins#index'
 
+
+
 end
