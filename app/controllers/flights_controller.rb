@@ -15,11 +15,17 @@ class FlightsController < ApplicationController
     render :json => @flight
   end
 
+  def search
+    @flight = Flight.where
+
+  end
+
+
   private
 
   def flight_params
     params.require(:flight).permit(:number, :date, :destination, :origin, :plane)
   end
 
-
+ 
 end

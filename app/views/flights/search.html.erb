@@ -12,9 +12,9 @@
   
     <div id="newAirplane" class="form_group">
       <div class="form_group">
-        <input type="text" placeholder="from" id="airplaneName" class="form-control">
-        <input type="text" placeholder="to" id="airplaneRow" class="form-control">
-
+        <input type="text" placeholder="from" id="from" class="form-control">
+        <input type="text" placeholder="to" id="to" class="form-control">
+        <%= render 'flights/location' %>
       </div>
 
       <div class="buttons">
@@ -25,3 +25,6 @@
 </div>
 
 <h4>Flight Search Result</h4>
+
+
+
