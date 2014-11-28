@@ -2,3 +2,9 @@ canvas {
     background: #fff;
     margin: 20px;
 }
+
+centre {
+  max-width: 1000px;
+  min-width: 620px;
+  margin: 0 auto;
+}
