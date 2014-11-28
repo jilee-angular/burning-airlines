@@ -1,9 +1,9 @@
 var App = App || {};
 
-App.Views.FlightItemView = Backbone.View.extend ({
+App.Views.FlightItemView = Backbone.View.extend({
 
-  tagName: 'li',
-  events: {
+  tagName: 'tr',
+  events: {},
 
 
   initialize: function() {
@@ -18,4 +18,4 @@ App.Views.FlightItemView = Backbone.View.extend ({
     return this;
   },
 
-
+});

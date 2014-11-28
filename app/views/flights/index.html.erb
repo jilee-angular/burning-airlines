@@ -17,15 +17,17 @@
       <input type="text" id="destination" placeholder="to" class="form-control">
       <input type="text" id="origin" placeholder="from" class="form-control">
       <input type="text" id="plane" placeholder="plane" class="form-control">
+
+        <div class="buttons">
+          <a href="" class="cancel">Cancel</a>
+          <button class="save btn btn-danger">Save</button>
+      </div>
     </div>
-    <div class="buttons">
-      <a href="" class="cancel">Cancel</a>
-      <button class="save btn btn-danger">Save</button>
-    </div>
+
 </div>
 
 <h2>Flights</h2>
-  <table class="table table-hover">
+  <table id="flight_details" class="table table-hover">
     <thead>
       <tr>
         <th>Flight</th>
@@ -36,27 +38,29 @@
         <th>Seats</th>
       </tr>
     </thead>
-  <span id="flight_details" class="table table-hover">
-    <% @flights.each do |flight| %>
-    <tr>
-      <td><%= link_to(flight.number, flight_path(flight)) %></td>
-      <td><%= flight.date %></td>
-      <td><%= flight.destination %></td>
-      <td><%= flight.origin %></td>
-      <td><%= flight.plane %></td>
-    </tr>
-    <% end %>
-</span>
-
-
+    <tbody>
+      <% @flights.each do |flight| %>
+      <tr>
+        <td><%= link_to(flight.number, flight_path(flight)) %></td>
+        <td><%= flight.date %></td>
+        <td><%= flight.destination %></td>
+        <td><%= flight.origin %></td>
+        <td><%= flight.plane %></td>
+      </tr>
+      <% end %>
+    </tbody>
   </table>
 </div>
 
-  <ul id="flight_details"></ul>
-
 
 <script type="template/handlebars" id="flightItemView">
-  <li>{{ number }} {{ date }}  {{ destination }}  {{ origin }}  {{ plane }}</li>
+
+      <td><a href="/flights/{{id}}">{{ number }}</a></td>
+      <td>{{ date }}</td>
+      <td>{{ destination }}</td>
+      <td>{{ origin }}</td>
+      <td>{{ plane }}</td>
+
 </script>
 
 
