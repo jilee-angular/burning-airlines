@@ -33,6 +33,18 @@ $btn.on('click', function(){
   $('#createForm').toggle("slow");
 });
 
+
+
+// hide create form to start
+var $btn = $("#createSearch");
+$('#createForm').hide();
+
+$btn.on('click', function(){
+  $('#createForm').toggle("slow");
+});
+
+
+
 //////////////////Add new flights/////////////////////////
 
 App.flights = [];
