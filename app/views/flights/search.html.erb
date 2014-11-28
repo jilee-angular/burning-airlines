@@ -20,12 +20,28 @@
 
 <h4>Flight Search Result</h4>
 
-<% @flights.each do |flight| %>
-    <tr>
-      <td><a href=""><%= flight.number %></a></td>
-      <td><%= flight.date %></td>
-      <td><%= flight.destination %></td>
-      <td><%= flight.origin %></td>
-      <td><%= flight.plane %></td>
-    </tr>
-<% end %>
+
+
+<table id="flight_details" class="table table-hover">
+    <thead>
+      <tr>
+        <th>Flight</th>
+        <th>Date</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Plane</th>
+        <th>Seats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @flights.each do |flight| %>
+      <tr>
+        <td><%= link_to(flight.number, flight_path(flight)) %></td>
+        <td><%= flight.date %></td>
+        <td><%= flight.destination %></td>
+        <td><%= flight.origin %></td>
+        <td><%= flight.plane %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>

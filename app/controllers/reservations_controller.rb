@@ -9,6 +9,20 @@ class ReservationsController < ApplicationController
     # end
   end
 
+
+  # def update
+  #   @reservation = Reservation.find(params[:id])
+  #   @reservation.row = params[:row]
+  #   @reservation.column = params[:column]
+
+
+  #   if @reservation.save    # success
+  #     redirect_to '/reservations'
+  #   else
+  #     render :edit
+  #   end
+  # end
+
   # def create
   #   @reservation = Reservation.new(flight_params)
   #   @reservation.save
