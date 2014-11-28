@@ -39,7 +39,7 @@
   <span id="flight_details" class="table table-hover">
     <% @flights.each do |flight| %>
     <tr>
-      <td><a href=""><%= flight.number %></a></td>
+      <td><%= link_to(flight.number, flight_path(flight)) %></td>
       <td><%= flight.date %></td>
       <td><%= flight.destination %></td>
       <td><%= flight.origin %></td>
