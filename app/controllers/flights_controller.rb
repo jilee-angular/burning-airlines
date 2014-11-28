@@ -5,7 +5,7 @@ class FlightsController < ApplicationController
 
     respond_to do |format|
       format.html {}
-      format.json { render :json => @quotes }
+      format.json { render :json => @flights }
     end
   end
 

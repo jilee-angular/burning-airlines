@@ -81,6 +81,18 @@ $btn.on('click', function(){
   $('#createForm').toggle("slow");
 });
 
+
+
+// hide create form to start
+var $btn = $("#createSearch");
+$('#createForm').hide();
+
+$btn.on('click', function(){
+  $('#createForm').toggle("slow");
+});
+
+
+
 //////////////////Add new flights/////////////////////////
 
 App.flights = [];
@@ -118,3 +130,15 @@ $('#newFlight button').on('click', function(){
   console.log(view);
   $('#flight_details').append(view.render().el);
 })
+
+
+
+ // hide create form to start
+var $btn = $("#createFlight");
+$('#container').hide();
+
+$btn.on('click', function(){
+  $('#container').toggle("slow");
+}); 
+
+
