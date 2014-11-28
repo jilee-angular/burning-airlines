@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   post '/sign_up' => 'users#create'
 
 
-
   get '/search' => 'flights#search'
 
 

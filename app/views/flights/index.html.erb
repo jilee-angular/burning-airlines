@@ -14,15 +14,30 @@
     </div>
 
 <h2>Flights</h2>
-  <ul>
-    <li>Date</li>
-    <li>Flight</li>
-    <li>From --> To</li>
-    <li>Plane</li>
-    <li>Seats</li>
-  </ul>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Flight</th>
+        <th>Date</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Plane</th>
+        <th>Seats</th>
+      </tr>
+    </thead>
+  <span id="flight_details" class="table table-hover">
+    <% @flights.each do |flight| %>
+    <tr>
+      <td><a href=""><%= flight.number %></a></td>
+      <td><%= flight.date %></td>
+      <td><%= flight.destination %></td>
+      <td><%= flight.origin %></td>
+      <td><%= flight.plane %></td>
+    </tr>
+    <% end %>
+</span>
 
-  <ul id="flight_details"></ul>
+  </table>
 </div>
 
 

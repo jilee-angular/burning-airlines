@@ -57,8 +57,11 @@ ul {
   border-radius: 5px;
   color: #fff;
 }
+
+
+
 #cancel:hover {
-  background-color: #d13636; 
+  background-color: #d13636;
   text-decoration: none;
 }
 #airplaneDetails {
