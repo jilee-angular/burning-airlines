@@ -6,7 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# Airplane.create(name: "Airbus A319")
-# Airplane.create(name: "Airbus A319")
-# Airplane.create(name: "Airbus A319")
-# Airplane.create(name: "Airbus A319")
+Airplane.create(name: "Airbus A319")
+
+user1 = User.create(first_name: "Joe", last_name: "Bloggs")
+user2 = User.create(first_name: "Steve", last_name: "Smith")
+
+flight = Flight.new(number: "111", origin: "SYD", destination: "MEL")
+flight.reservations.new(user_id: user1.id)
+flight.reservations.new(user_id: user2.id)
+flight.save
+
+flight = Flight.new(number: "222", origin: "LAX", destination: "LHR")
+flight.reservations.new(user_id: user1.id)
+flight.reservations.new(user_id: user2.id)
+flight.save
