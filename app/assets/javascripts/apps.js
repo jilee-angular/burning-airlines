@@ -100,7 +100,7 @@ App.flights = new App.Collections.Flights();
 
 App.flights.fetch().done(function(){
   App.flights.each(function(flight, index){
-    var view = new App.Views.FlightItemView({ model: airplane });
+    var view = new App.Views.FlightItemView({ model: flight });
     $('#flightList ul').append(view.render().el);
   });
 }); // ends fetch
@@ -123,11 +123,13 @@ $('#newFlight button').on('click', function(){
 
   var flight = new App.Models.Flight({ number: flight_number, date: date, destination: destination, origin: origin, plane: plane });
 
-  App.flights.create(flight);
+  App.flights.create(flight, {success: function(){
+    var view = new App.Views.FlightItemView({ model: flight });
+    console.log(flight.id);
+    $('#flight_details tbody').append(view.render().el);
 
-  var view = new App.Views.FlightItemView({ model: flight });
-  console.log(view);
-  $('#flight_details').append(view.render().el);
+  }})
+
 })
 
 
