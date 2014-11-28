@@ -25,21 +25,20 @@ $('#newAirplane button').on('click', function(){
   $('#airplaneDetails').empty().append(view.render().el);
 
   // renders the flights seats
-  (function(){//your code here
+
+  (function(){
   //grid width and height
-  var bw = row * 10;
-  var bh = col * 10;
+  var bw = row * 40;
+  var bh = col * 40;
   //padding around grid
   var p = 10;
   //size of canvas
   var cw = bw + (p*2) + 1;
   var ch = bh + (p*2) + 1;
 
-  var canvas = $('<canvas/>').attr({width: cw, height: ch}).appendTo('body');
-
-  // if canvas {
-  //     return false;
-  // }
+  var wrapper = $('<div class="centre">');
+  var canvas = $('<canvas/>').attr({width: cw, height: ch});
+  wrapper.append(canvas).appendTo('body');
 
   var context = canvas.get(0).getContext("2d");
 
@@ -139,6 +138,6 @@ $('#container').hide();
 
 $btn.on('click', function(){
   $('#container').toggle("slow");
-}); 
+});
 
 
