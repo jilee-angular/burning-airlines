@@ -15,5 +15,6 @@ Rails.application.routes.draw do
 
   get '/search' => 'flights#search'
 
+  get '/admin' => 'admins#index'
 
 end
